@@ -35,16 +35,13 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.12.0
-      
+          node-version: 22.12.0      
       - name: Install dependencies
         run: npm ci
-
 
       - name: Style
         run: npm run format:check
 
-
       - name: Lint
-        run: npm run lint
+        run: npm run lint --max-warnings=0
  
